@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Junayed Rahaman">
+    <meta name="description" content="Habit Scorecard">
+    <link rel="stylesheet" href="https://unpkg.com/papercss@1.8.3/dist/paper.min.css">
+    <style type="text/css">
+        .container{
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+        }
+        .inputs{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        li{
+            font-size: 0.4rem;
+        }
+        h3, p, h2{
+            text-align: center;
+        }
+        p{
+            font-size: 1.5rem;
+        }
+        .box{
+            margin-top: 30px;
+        }
+        h2{
+            margin-bottom: 20px;
+        }
+    </style>
+    <title>Habit Scorecard</title>
+</head>
+<body>
+    <div class="paper container">
+        <h2 class="text-success">HABIT SCORECARD</h2>
+        <span class="collapsible label"></span>
+<h3><button id="leftBtn" onclick="callLBtn()"> < </button> <span id="days">Monday</span>  <button id="rightBtn" onclick="callRBtn()"> > </button></h3>
+                <table>
+                    <thead>
+                      <tr>
+                        <th>Count</th>
+                        <th>Habits</th>
+                        <th>Done</th>
+                        <th>Not Done</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>Learn Web Dev</td>
+                        <td><button>Done!</button></td>
+                        <td><button>Not Done!</button></td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>Learn Automata</td>
+                        <td><button>Done!</button></td>
+                        <td><button>Not Done!</button></td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>Learn Microprocessor</td>
+                        <td><button>Done!</button></td>
+                        <td><button>Not Done!</button></td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td>Learn Internet Texhnology</td>
+                        <td><button>Done!</button></td>
+                        <td><button>Not Done!</button></td>
+                      </tr>
+                      <tr>
+                        <td>5</td>
+                        <td>Play At BSS Ground</td>
+                        <td><button>Done!</button></td>
+                        <td><button>Not Done!</button></td>
+                      </tr>
+                      <tr>
+                        <td>6</td>
+                        <td>Read Books</td>
+                        <td><button>Done!</button></td>
+                        <td><button>Not Done!</button></td>
+                      </tr>
+                      <tr>
+                        <td>7</td>
+                        <td>Eat Healthy</td>
+                        <td><button>Done!</button></td>
+                        <td><button>Not Done!</button></td>
+                      </tr>
+
+                    </tbody>
+                  </table>
+
+                  <div class="box border border-primary"><p class="text-secondary">Score: <span> 100 </span></p></div>
+
+          </div>
+
+          <script type="text/javascript">
+            var days = document.getElementById("days");
+            var rightBtn = document.getElementById("rightBtn");
+            var leftBtn = document.getElementById("leftBtn");
+            var count = 0;
+            var arr = ['Monday', 'Tuseday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+            function callRBtn(){
+            // for(count; count<7; count++){
+            //     days.textContent = arr[count];
+            //     if(count == 7)
+            //     break;
+            // }
+            if(count < 6){
+            count = count + 1;
+            }
+            days.textContent = arr[count];
+        }
+            function callLBtn(){
+                if(count > 0){
+                count = count - 1;
+                }
+                days.textContent = arr[count];
+        }
+
+            
+
+          </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+#container{
+  background: #555;
+  display: flex;
+  flex-wrap: wrap;
+  /* Horizontal Aligns */
+  /* aligning to left */
+  /* justify-content: flex-start; */
+  /* aligning to right  */
+  /* justify-content: flex-end; */
+  /* aligning to center  */
+  /* justify-content: center; */
+  /* divide the space around flex items */
+  /* justify-content: space-around; */
+  /* remaining space will go in between */
+  /* justify-content: space-between; */
+  /* space evenly on all sides */
+  justify-content: space-evenly;
+
+  /* Vertical Aligns */
+  /* height is needed/must be */
+  height: 600px;
+  /* by default */
+  /* align-items: stretch; */
+  /* vertical align top */
+  /* align-items: flex-start; */
+  align-items: baseline;
+  /* vertical align bottom */
+  /* align-items: flex-end; */
+  /* vertical align center */
+  /* align-items: center; */
+
+  /* Align items vertical when there is extra space */
+  /* align-content: flex-start; */
+  /* align-content: flex-end; */
+  /* align-content: center; */
+  /* default */
+  /* align-content: space-around; */
+  /* align-content: space-between; */
+
+}
+.item-1{
+  /* change order of items */
+  order: 3;
+}
+.item-2{
+  /* align single item vertically */
+  /* align-self: flex-start;
+  align-self: flex-end; */
+  align-self: center;
+  order: 2;
+}
+.item-3{
+  order: 1;
+}
+
+.item{
+  background: #f4f4f4;
+  border:#ccc solid 1px;
+  padding: 1rem;
+  text-align: center;
+  margin: 0.5rem;
+  /* width: 300px  */
+  flex-basis: 200px;
+}

@@ -1,0 +1,46 @@
+/* Flexbox Notes:
+*Modern layout mode in CSS3
+*"flex" is a value for the display property
+*Replaces floats and is much more elegant to work with
+*Aligns items both horizontal(row) and vertical(column)
+*Flex items can be re-ordered via CSS
+ */
+
+ /* display: flex; creates a flex container */
+ /* All direct child elements are flex items */
+
+/* ->justify-content: Align all flex items (child of flex container) along the main axis(horizontal)
+->align-items: Align items along the cross axis(Vertical)
+->align-content: Align when extra space in cross axis */
+#container{
+  display: flex;
+  /* flex items(it's direct children divs) of #container flex container will be laid out horizontlly  */
+  /* flex-direction: column; */
+  /* Changes flex direction in croos/y axis now laid out vertically */
+  flex-direction: row;
+  /* flex-direction: row-reverse; */
+  /* like float right and reversed order laid out horizontally */
+  /* to wrap content to next line and remove scroll bar */
+  flex-wrap: wrap;
+  /* if want to print flex items in reverse order */
+  /* flex-wrap: wrap-reverse; */
+/* shortcut of flex-direction and flex wrap */
+/* flex-flow: row wrap; */
+}
+
+.item{
+  background: #f4f4f4;
+  border:#ccc solid 1px;
+  padding: 1.6rem;
+  text-align: center;
+  /* flex items gets all the way across of browser window 100% in x axis */
+  margin: 0.75rem;
+  flex:1;
+}
+
+/* select first flex item */
+.item:first-child{
+  /* the first child width gets bigger */
+  /* flex: 3; */
+  flex: 1;
+}
